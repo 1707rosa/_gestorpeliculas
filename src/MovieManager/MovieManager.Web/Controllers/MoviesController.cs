@@ -15,19 +15,19 @@ namespace MovieManager.Web.Controllers
             _context = context;
         }
 
-        // GET: Movies
+        
         public IActionResult Index()
         {
             return View(_context.Movies.ToList());
         }
 
-        // GET: Movies/Create
+        
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Movies/Create
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Id,Title,Director,ReleaseDate,Genre,Rating")] Movie movie)
@@ -41,7 +41,7 @@ namespace MovieManager.Web.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Edit/5
+       
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,7 +90,6 @@ namespace MovieManager.Web.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Delete/5
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,7 +107,7 @@ namespace MovieManager.Web.Controllers
             return View(movie);
         }
 
-        // POST: Movies/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
