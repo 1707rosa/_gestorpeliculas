@@ -2,6 +2,7 @@
 using MovieManager.Web.Data;
 using MovieManager.Web.Models;
 using Microsoft.EntityFrameworkCore;
+using MovieManager.Domain.Entities;
 
 
 namespace MovieManager.Web.Controllers
