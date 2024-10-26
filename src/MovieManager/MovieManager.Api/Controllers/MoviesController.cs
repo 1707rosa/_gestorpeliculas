@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MovieManager.Web.Data;
-using MovieManager.Web.Requests;
-using MovieManager.Web.Responses;
-using MovieManager.Web.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using MovieManager.Domain;
+using MovieManager.Api.Requests;
+using MovieManager.Api.Responses;
+using MovieManager.Domain.Entities;
+
 
 namespace MovieManager.Web.Controllers
 {
@@ -31,14 +30,14 @@ namespace MovieManager.Web.Controllers
         [HttpPost("AddMovie")]
         public async Task<ActionResult<NewMovieResponse>> AddMovie(NewMovieRequest request)
         {
-            var movieDb = new Movie
-            {
-                Title = request.Title,
-                Director = request.Director,
-                ReleaseDate = request.ReleaseDate,
-                Genre = request.Genre,
-                Rating = request.Rating
-            };
+            var movieDb = new Movie();
+
+            movieDb.Title = request.Title;
+            movieDb.Director = request.Director;
+            movieDb.ReleaseDate = request.ReleaseDate;
+            movieDb.Genre = request.Genre;
+            movieDb.Rating = request.Rating;
+           
 
             _context.Movies.Add(movieDb);
             await _context.SaveChangesAsync();

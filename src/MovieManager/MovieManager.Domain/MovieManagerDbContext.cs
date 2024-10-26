@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieManager.Web.Models;
+using MovieManager.Domain.Entities;
 
-namespace MovieManager.Web.Data
+namespace MovieManager.Domain
 {
     public class MovieManagerDbContext : DbContext
     {
