@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieManager.Domain.Entities
 {
@@ -9,14 +10,15 @@ namespace MovieManager.Domain.Entities
         [Required]
         public string? Title { get; set; }
 
-        public string? Director { get; set; }
+        public string Director { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime? ReleaseDate { get; set; }
 
-        public string ? Genre { get; set; }
+        public string Genre { get; set; }
 
         [Range(0, 10)]
-        public decimal? Rating { get; set; }
+        [Column(TypeName = "decimal(3,1)")]
+        public decimal Rating { get; set; }
     }
 }

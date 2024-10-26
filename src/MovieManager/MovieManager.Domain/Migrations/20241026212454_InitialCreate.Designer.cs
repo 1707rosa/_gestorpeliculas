@@ -12,7 +12,7 @@ using MovieManager.Domain;
 namespace MovieManager.Domain.Migrations
 {
     [DbContext(typeof(MovieManagerDbContext))]
-    [Migration("20241026204241_InitialCreate")]
+    [Migration("20241026212454_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -34,13 +34,15 @@ namespace MovieManager.Domain.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Director")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("Rating")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal>("Rating")
+                        .HasColumnType("decimal(2,1)");
 
                     b.Property<DateTime?>("ReleaseDate")
                         .HasColumnType("datetime2");
