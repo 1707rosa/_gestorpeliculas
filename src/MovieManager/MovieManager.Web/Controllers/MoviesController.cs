@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MovieManager.Web.Data;
+using MovieManager.Domain;
 using MovieManager.Web.Models;
 using Microsoft.EntityFrameworkCore;
 using MovieManager.Domain.Entities;

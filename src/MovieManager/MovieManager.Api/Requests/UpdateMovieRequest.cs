@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieManager.Api.Requests
 {
-    public class NewMovieRequest
+    public class UpdateMovieRequest
     {
+        public int Id { get; set; }
 
         [Required]
         public string Title { get; set; }

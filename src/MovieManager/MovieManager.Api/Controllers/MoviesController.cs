@@ -44,5 +44,46 @@ namespace MovieManager.Web.Controllers
 
             return new NewMovieResponse { Id = movieDb.Id };
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UpdateMovieResponse>> UpdateMovie(int id, [FromBody] UpdateMovieRequest request)
+        {
+            var movie = await _context.Movies.FindAsync(id);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            movie.Title = request.Title;
+            movie.Director = request.Director;
+            movie.ReleaseDate = request.ReleaseDate;
+            movie.Genre = request.Genre;
+            movie.Rating = request.Rating;
+
+            await _context.SaveChangesAsync();
+
+            return new UpdateMovieResponse
+            {
+                Id = movie.Id,
+                Message = "Movie updated successfully"
+            };
+        }
+
+        [HttpDelete("DeleteMovie/{id}")]
+        public async Task<ActionResult> DeleteMovie(int id)
+        {
+            var movieDb = await _context.Movies.FindAsync(id);
+            if (movieDb == null)
+            {
+                return NotFound();
+            }
+
+            _context.Movies.Remove(movieDb);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
     }
 }
