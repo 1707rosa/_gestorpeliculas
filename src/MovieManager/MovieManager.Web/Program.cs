@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using MovieManager.Web.Data;
+using MovieManager.Web.Services;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<MovieManagerDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("MovieManagerStrConnection")));
+//builder.Services.AddDbContext<MovieManagerDbContext>(options =>
+//options.UseSqlServer(builder.Configuration.GetConnectionString("MovieManagerStrConnection")));
+builder.Services.AddHttpClient<MovieService>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
