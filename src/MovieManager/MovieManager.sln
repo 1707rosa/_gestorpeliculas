@@ -5,9 +5,11 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieManager.Web", "MovieManager.Web\MovieManager.Web.csproj", "{4F0084C4-48A5-4938-9A0C-560F0D5B6A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Api", "MovieManager.Api\MovieManager.Api.csproj", "{BC1F13A8-A1D9-48E5-A45E-8C954AA1AB06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieManager.Api", "MovieManager.Api\MovieManager.Api.csproj", "{BC1F13A8-A1D9-48E5-A45E-8C954AA1AB06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Domain", "MovieManager.Domain\MovieManager.Domain.csproj", "{C04E2FB0-A0CE-42E2-8DD8-7DD01660F862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieManager.Domain", "MovieManager.Domain\MovieManager.Domain.csproj", "{C04E2FB0-A0CE-42E2-8DD8-7DD01660F862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Infrastructure", "MovieManager.Infraestructure\MovieManager.Infrastructure.csproj", "{9F4658EE-2DA9-4648-BEA0-F7AEBAE8B34C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C04E2FB0-A0CE-42E2-8DD8-7DD01660F862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C04E2FB0-A0CE-42E2-8DD8-7DD01660F862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C04E2FB0-A0CE-42E2-8DD8-7DD01660F862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4658EE-2DA9-4648-BEA0-F7AEBAE8B34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4658EE-2DA9-4648-BEA0-F7AEBAE8B34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4658EE-2DA9-4648-BEA0-F7AEBAE8B34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4658EE-2DA9-4648-BEA0-F7AEBAE8B34C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
