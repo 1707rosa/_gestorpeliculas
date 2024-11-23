@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MovieManager.Domain\MovieManager.Domain.csproj" />
+    <ProjectReference Include="..\MovieManager.Infraestructure\MovieManager.Infrastructure.csproj" />
   <ProjectReference Include="..\MovieManager.Infrastructure\MovieManager.Infrastructure.csproj" />
   </ItemGroup>
 

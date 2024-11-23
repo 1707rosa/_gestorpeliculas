@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MovieManager.Api\MovieManager.Api.csproj" />
     <ProjectReference Include="..\MovieManager.Domain\MovieManager.Domain.csproj" />
     <ProjectReference Include="..\MovieManager.Web\MovieManager.Web.csproj" />
   </ItemGroup>
